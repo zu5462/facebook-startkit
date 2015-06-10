@@ -28,14 +28,13 @@
 		
 	<script>
 		Parse.initialize("okOiZiRCfYjplsZ5eq8Rg2pgUUPZo3ueOtw9HCFZ", "L0iLamDcucPZmJYOiUVYbobaEUwBDj37JW7wexqw");				window.fbAsyncInit = function() {
-				Parse.FacebookUtils.init({ 
+			Parse.FacebookUtils.init({ 
 				appId : '863494857068848', 
 				status : true, 
 				cookie : true, 
 				xfbml : true,
 				version : 'v2.3' 
 				});
-				};
 				(function(d, s, id){
 				var js, fjs = d.getElementsByTagName(s)[0];
 				if (d.getElementById(id)) {return;}
@@ -44,7 +43,7 @@
 				fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));
        
-		function fblogin(){
+	function fblogin(){
 		Parse.FacebookUtils.logIn(null, {
 				success: function(user) {
 				if (!user.existed()) {
