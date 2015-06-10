@@ -27,17 +27,14 @@
 	    </article>	
 		
 	<script>
-		//step1:https://www.parse.com/docs/js/guide#users-facebook-users
-				// Initialize Parse
-				Parse.initialize("okOiZiRCfYjplsZ5eq8Rg2pgUUPZo3ueOtw9HCFZ", "L0iLamDcucPZmJYOiUVYbobaEUwBDj37JW7wexqw");				window.fbAsyncInit = function() {
-				Parse.FacebookUtils.init({ // this line replaces FB.init({
-				appId : '863494857068848, // Facebook App ID
-				status : true, // check Facebook Login status
-				cookie : true, // enable cookies to allow Parse to access the session
-				xfbml : true, // initialize Facebook social plugins on the page
-				version : 'v2.3' // point to the latest Facebook Graph API version
+		Parse.initialize("okOiZiRCfYjplsZ5eq8Rg2pgUUPZo3ueOtw9HCFZ", "L0iLamDcucPZmJYOiUVYbobaEUwBDj37JW7wexqw");				window.fbAsyncInit = function() {
+				Parse.FacebookUtils.init({ 
+				appId : '863494857068848', 
+				status : true, 
+				cookie : true, 
+				xfbml : true,
+				version : 'v2.3' 
 				});
-				// Run code after the Facebook SDK is loaded.
 				};
 				(function(d, s, id){
 				var js, fjs = d.getElementsByTagName(s)[0];
@@ -48,7 +45,6 @@
 				}(document, 'script', 'facebook-jssdk'));
        
 		function fblogin(){
-		//step2:https://developers.facebook.com/docs/graph-api/using-graph-api/v2.3	
 		Parse.FacebookUtils.logIn(null, {
 				success: function(user) {
 				if (!user.existed()) {
